@@ -1,98 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Smart Health Monitor</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep | Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<h1>💓 Smart Health Monitor</h1>
-<p>Track BP, Sugar & BMI Easily</p>
-</header>
-
 <nav>
-<button onclick="showSection('home')">Dashboard</button>
-<button onclick="showSection('bp')">Blood Pressure</button>
-<button onclick="showSection('sugar')">Blood Sugar</button>
-<button onclick="showSection('bmi')">BMI</button>
-<button onclick="showSection('history')">History</button>
+    <div class="logo">Deep.</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+    </ul>
+    <div class="right-nav">
+        <button onclick="toggleTheme()" class="theme-btn">🌙</button>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </div>
 </nav>
 
-<main>
-
-<!-- DASHBOARD -->
-<section id="home" class="page">
-<h2>Health Dashboard</h2>
-
-<div class="dashboard">
-<div class="card">
-<h3>Last BP</h3>
-<p id="lastBP">--</p>
-</div>
-
-<div class="card">
-<h3>Last Sugar</h3>
-<p id="lastSugar">--</p>
-</div>
-
-<div class="card">
-<h3>Last BMI</h3>
-<p id="lastBMI">--</p>
-</div>
-</div>
-
-<div class="tips">
-<h3>💡 Health Tip</h3>
-<p id="healthTip">Enter your values to get smart suggestions.</p>
-</div>
-
+<!-- Hero -->
+<section id="home" class="hero">
+    <h1>Hello, I'm <span>Deep</span></h1>
+    <h2><span class="typing"></span></h2>
+    <button onclick="scrollToSection('projects')">View Work</button>
 </section>
 
-<!-- BP -->
-<section id="bp" class="page hidden">
-<h2>Blood Pressure Checker</h2>
-
-<input type="number" id="systolic" placeholder="Systolic (e.g. 120)">
-<input type="number" id="diastolic" placeholder="Diastolic (e.g. 80)">
-<button onclick="checkBP()">Check BP</button>
-
-<div id="bpResult" class="result"></div>
+<!-- About -->
+<section id="about" class="reveal">
+    <h2>About Me</h2>
+    <p>I love building modern responsive websites and learning advanced DSA concepts.</p>
 </section>
 
-<!-- SUGAR -->
-<section id="sugar" class="page hidden">
-<h2>Blood Sugar Checker</h2>
-
-<input type="number" id="sugarValue" placeholder="Sugar Level (mg/dL)">
-<button onclick="checkSugar()">Check Sugar</button>
-
-<div id="sugarResult" class="result"></div>
+<!-- Skills -->
+<section id="skills" class="reveal">
+    <h2>My Skills</h2>
+    <div class="skill">
+        <p>HTML</p>
+        <div class="progress"><div style="width:90%"></div></div>
+    </div>
+    <div class="skill">
+        <p>CSS</p>
+        <div class="progress"><div style="width:85%"></div></div>
+    </div>
+    <div class="skill">
+        <p>JavaScript</p>
+        <div class="progress"><div style="width:75%"></div></div>
+    </div>
+    <div class="skill">
+        <p>C++</p>
+        <div class="progress"><div style="width:80%"></div></div>
+    </div>
 </section>
 
-<!-- BMI -->
-<section id="bmi" class="page hidden">
-<h2>BMI Calculator</h2>
-
-<input type="number" id="weight" placeholder="Weight (kg)">
-<input type="number" id="height" placeholder="Height (cm)">
-<button onclick="calculateBMI()">Calculate BMI</button>
-
-<div id="bmiResult" class="result"></div>
+<!-- Projects -->
+<section id="projects" class="reveal">
+    <h2>Projects</h2>
+    <div class="project-card">FoodieExpress</div>
+    <div class="project-card">SmartLife Planner</div>
 </section>
-
-<!-- HISTORY -->
-<section id="history" class="page hidden">
-<h2>Health History</h2>
-<ul id="historyList"></ul>
-</section>
-
-</main>
 
 <footer>
-<p>© 2026 Smart Health Monitor | Built by Deep 💙</p>
+    <p>© 2026 Deep | All Rights Reserved</p>
 </footer>
 
 <script src="script.js"></script>

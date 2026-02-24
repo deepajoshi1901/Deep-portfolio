@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Smart Health Monitor</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>💓 Smart Health Monitor</h1>
+<p>Track BP, Sugar & BMI Easily</p>
+</header>
+
+<nav>
+<button onclick="showSection('home')">Dashboard</button>
+<button onclick="showSection('bp')">Blood Pressure</button>
+<button onclick="showSection('sugar')">Blood Sugar</button>
+<button onclick="showSection('bmi')">BMI</button>
+<button onclick="showSection('history')">History</button>
+</nav>
+
+<main>
+
+<!-- DASHBOARD -->
+<section id="home" class="page">
+<h2>Health Dashboard</h2>
+
+<div class="dashboard">
+<div class="card">
+<h3>Last BP</h3>
+<p id="lastBP">--</p>
+</div>
+
+<div class="card">
+<h3>Last Sugar</h3>
+<p id="lastSugar">--</p>
+</div>
+
+<div class="card">
+<h3>Last BMI</h3>
+<p id="lastBMI">--</p>
+</div>
+</div>
+
+<div class="tips">
+<h3>💡 Health Tip</h3>
+<p id="healthTip">Enter your values to get smart suggestions.</p>
+</div>
+
+</section>
+
+<!-- BP -->
+<section id="bp" class="page hidden">
+<h2>Blood Pressure Checker</h2>
+
+<input type="number" id="systolic" placeholder="Systolic (e.g. 120)">
+<input type="number" id="diastolic" placeholder="Diastolic (e.g. 80)">
+<button onclick="checkBP()">Check BP</button>
+
+<div id="bpResult" class="result"></div>
+</section>
+
+<!-- SUGAR -->
+<section id="sugar" class="page hidden">
+<h2>Blood Sugar Checker</h2>
+
+<input type="number" id="sugarValue" placeholder="Sugar Level (mg/dL)">
+<button onclick="checkSugar()">Check Sugar</button>
+
+<div id="sugarResult" class="result"></div>
+</section>
+
+<!-- BMI -->
+<section id="bmi" class="page hidden">
+<h2>BMI Calculator</h2>
+
+<input type="number" id="weight" placeholder="Weight (kg)">
+<input type="number" id="height" placeholder="Height (cm)">
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<div id="bmiResult" class="result"></div>
+</section>
+
+<!-- HISTORY -->
+<section id="history" class="page hidden">
+<h2>Health History</h2>
+<ul id="historyList"></ul>
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Smart Health Monitor | Built by Deep 💙</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

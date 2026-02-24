@@ -1,0 +1,147 @@
+body{
+margin:0;
+font-family:Poppins,sans-serif;
+background:linear-gradient(135deg,#1f4037,#99f2c8);
+text-align:center;
+color:white;
+}
+
+header{
+padding:20px;
+background:linear-gradient(90deg,#ff416c,#ff4b2b);
+animation:slideDown 1s ease;
+}
+
+nav button{
+margin:8px;
+padding:10px 18px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+font-weight:bold;
+background:linear-gradient(45deg,#00c6ff,#0072ff);
+color:white;
+transition:0.4s;
+}
+
+nav button:hover{
+transform:scale(1.1);
+background:linear-gradient(45deg,#ff512f,#dd2476);
+}
+
+.page{
+animation:fadeIn 0.6s ease;
+}
+
+.hidden{
+display:none;
+}
+
+input{
+padding:10px;
+margin:10px;
+border:none;
+border-radius:20px;
+width:220px;
+transition:0.4s;
+}
+
+input:focus{
+outline:none;
+transform:scale(1.05);
+box-shadow:0 0 10px white;
+}
+
+button{
+margin:10px;
+padding:10px 20px;
+border:none;
+border-radius:25px;
+cursor:pointer;
+background:linear-gradient(45deg,#11998e,#38ef7d);
+color:white;
+transition:0.4s;
+}
+
+button:hover{
+transform:translateY(-3px);
+}
+
+.result{
+margin-top:20px;
+padding:15px;
+border-radius:20px;
+font-weight:bold;
+animation:fadeIn 0.5s ease;
+}
+
+.normal{
+background:linear-gradient(45deg,#00f260,#0575e6);
+}
+
+.high{
+background:linear-gradient(45deg,#ff416c,#ff4b2b);
+}
+
+.low{
+background:linear-gradient(45deg,#f7971e,#ffd200);
+}
+
+.dashboard{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+width:220px;
+padding:20px;
+border-radius:20px;
+background:linear-gradient(135deg,#667eea,#764ba2);
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+transition:0.4s;
+}
+
+.card:hover{
+transform:scale(1.08);
+background:linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.tips{
+margin-top:30px;
+padding:20px;
+border-radius:20px;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+animation:pulse 2s infinite;
+}
+
+ul{
+list-style:none;
+padding:0;
+}
+
+ul li{
+margin:10px;
+padding:10px;
+border-radius:20px;
+background:rgba(255,255,255,0.2);
+animation:fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes slideDown{
+from{transform:translateY(-40px);opacity:0;}
+to{transform:translateY(0);opacity:1;}
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.03);}
+100%{transform:scale(1);}
+}
